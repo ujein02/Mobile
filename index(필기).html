@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <title>베스트펜</title>
+    <!-- 문서 정보 : 메타포(metaphor)-->
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">    <!-- 코드가 깨지는 경우 방지-->
+    <meta http-equiv="Content-Style-Type" content="text/css">   
+    <meta name="application-name" content="베스트펜">
+    <meta name="subject" content="베스트펜">
+    <meta name="keywords" content="베스트펜">
+    <meta name="description" content="만년필에 대한 정보를 제공하는 웹">
+    <meta name="url" content="https://ujein02.github.io/mobile01">
+    <meta name="author" content="kim ji eun">
+    <meta name="email" content="ujein@naver.com">
+    <meta name="robots" content="index, flow">
+    <meta http-equiv="refresh" content="600">                                                <!-- 10분마다 새로고침-->
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1, Transition=12">           <!-- 페이지 전환 효과-->
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ujein02.github.io/mobile01">                    <!-- 썸네일 설정-->
+    <meta property="og:title" content="베스트펜">
+    <meta property="og:site_name" content="베스트펜">
+    <meta property="og:image" content="siteiamge.jpg">               <!-- 썸네일 이미지 설정-->
+    <meta property="og:image:width" content="1000"> 
+    <meta property="og:image:height" content="400">
+    <meta property="og:locale" content="ko_KR">
+
+    <meta name="twitter:card" content="video">
+    <meta name="twitter:title" content="베스트펜">
+    <meta name="twitter:description" content="만년필에 대한 정보를 제공하는 웹">
+    <meta name="twitter:image" content="siteiamge.jpg">
+
+    <!-- 해상도 및 브라우저 앱 아이콘 및 바로가기 아이콘 설정 -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- 애플사 기기 아이콘 설정 -->
+    <link rel="apple-mobile-web-app" href="">
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <!-- iphone 저사양 및 ipod -->
+    <link rel="apple-touch-icon" href="favicon-57.png" sizes="57x57">         <!-- iphone 저사양 및 ipod -->
+    <link rel="apple-touch-icon" href="favicon-76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="favicon-120.png" sizes="120x120">  
+    <link rel="apple-touch-icon" href="favicon-152.png" sizes="152x152"> 
+    <link rel="apple-touch-icon" href="favicon-180.png" sizes="180x180"> 
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    
+    <link rel="icon" href="favicon-16.png" sizes="16x16">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="icon" href="favicon-48.png" sizes="48x48">
+    <link rel="icon" href="favicon-64.png" sizes="64x64">
+    <link rel="icon" href="favicon-128.png" sizes="128x128">
+
+    <!-- 반응형 및 모바일에서는 스타일의 크기 단위는 vw, vh, %, rem 등과 같이 해당 기기나 콘텐츠의 상대적인 다위를 사용-->
+    
+    <!-- 앱 미리보기 정보****=> content 기재할것-->
+    <!--iOS-->
+    <meta property="al:ios:url" content=" ios 앱 URL" />
+    <meta property="al:ios:app_store_id" content="ios 앱스토어 ID" /> 
+    <meta property="al:ios:app_name" content="ios 앱 이름" /> 
+    <!--Android-->
+    <meta property="al:android:url" content="안드로이드 앱 URL" />
+    <meta property="al:android:app_name" content="안드로이드 앱 이름" />
+    <meta property="al:android:package" content="안드로이드 패키지 이름" /> 
+    <meta property="al:web:url" content="안드로이드 앱 URL" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+    .page_tit { font-size:5vw; clear:both; padding-bottom: 2rem; }
+    .ui-header .ui-title { text-align:right; }
+    </style>
+</head>
+<body class="ui-mobile-viewport ui-overlay-b">
+    <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
+        <header class="ui-header" data-role="header" data-theme="b">
+            <h2 class="ui-title">여기는 헤더</h2>
+        </header>
+        <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a">
+                    <a href="#page1" id="chat" data-icon="comment" data-theme="a" class="ui-btn ti-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">chat</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-b">
+                    <a href="#page2" id="" data-icon="mail" data-theme="a" class="ui-btn ti-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">mail</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-c">
+                    <a href="#page3" id="" data-icon="alert" data-theme="a" class="ui-btn ti-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">alert</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-d">
+                    <a href="#page4" id="" data-icon="camera" data-theme="a" class="ui-btn ti-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">camera</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-e">
+                    <a href="" id="" data-icon="clock" data-theme="a" class="ui-btn ti-btn-icon-top ui-btn-up-a">
+                        <span class="ui-btn-text">clock</span>
+                        <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="ui-content" data-role="content">        <!--https://api.jquerymobile.com/category/widgets/-->
+            <div data-role="container">
+                <h2 class="ui-title">외부문서 dialog</h2>
+                <div data-role="button-groups">
+                    <a href="out.html" data-rel="dialog" class="ui-btn">outter Open dialog</a>
+                </div>
+            </div>
+            <div data-role="container">
+                <h2 class="ui-title">내부문서 dialog</h2>
+                <div data-role="button-groups">
+                    <a href="#page1" class="ui-btn" data-rel="dialog" data-transition="pop">page1</a>
+                    <a href="#page2" class="ui-btn" data-rel="dialog" data-transition="slidedown">page2</a>
+                    <a href="#page3" class="ui-btn" data-rel="dialog" data-transition="flip">page3</a>
+                </div>
+            </div>
+        </div>
+        <footer class="ui-footer"data-role="footer" data-position="fixed">
+            <h2 class="ui-title">여기는 푸터</h2>
+        </footer>
+    </div>
+    <div id="page1" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
+            <h1 class="ui-title" role="heading">sub Page</h1>
+        </header>
+        <div class="ui-content" data-role="content">
+            <h1 class="ui-title">폼 목록</h1>
+            <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" >
+                <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                    <label for="name2">Text Input:</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear">
+                        <input type="text" name="name2" id="name2" value="" data-clear-btn="true">
+                        <a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title="Clear text">Clear text</a>
+                    </div>
+    
+                </li>
+                <li class="ui-field-contain ui-li-static ui-body-inherit">
+                    <label for="textarea2">Textarea:</label>
+                    <textarea name="textarea2" cols="40" rows="8" id="textarea2" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" style="height: 52px;"></textarea>
+                </li>
+                <li class="ui-field-contain ui-li-static ui-body-inherit">
+                    <label for="flip2" id="flip2-label">Flip switch:</label>
+                    <select name="flip2" id="flip2" data-role="slider" tabindex="-1" class="ui-slider-switch">
+                        <option value="off">off</option>
+                        <option value="on">on</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+            <h3>여기는 푸터입니다.</h3>
+        </footer>
+    </div>
+    <div id="page2" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
+            <h1 class="ui-title" role="heading">sub Page2</h1>
+        </header>
+        <div class="ui-content" data-role="content">
+            <h1 class="ui-title">로그인 폼</h1>
+            <div data-role="container">
+                <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" >
+                    <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                        <input type="text" name="id" id="id" value="" data-clear-btn="true" placeholder="ID 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="password" name="pw" id="pw" value="" data-clear-btn="true" placeholder="PW 입력">
+                    </li>
+                    <div class="ui-btn-group">
+                        <button type="submit" class="ui-btn ui-btn-inline">로그인</button>
+                        <button type="reset" class="ui-btn ui-btn-inline">취소</button>
+                    </div>
+                </ul>
+            </div>    
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+            <h3>여기는 푸터입니다.</h3>
+        </footer>
+    </div>
+    <div id="page3" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
+            <h1 class="ui-title" role="heading">sub Page3</h1>
+        </header>
+        <div data-role="content" role="sub" class="ui-content">
+            <p>여기는 서브 콘텐츠3 입니다.</p>
+            <a href="#page0" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">메인</a>
+            <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지1</a>
+            <a href="#page2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지2</a>
+            <a href="#page4" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지4</a>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+            <h3>여기는 푸터입니다.</h3>
+        </footer>
+    </div>
+    <div id="page4" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="b">
+            <a href="#page3" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
+            <h1 class="ui-title" role="heading">sub Page4</h1>
+        </header>
+        <div class="ui-content" data-role="content">
+            <h1 class="ui-title">회원가입 폼</h1>
+            <div data-role="container">
+                <form>
+                    <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" >
+                        <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                            <input type="text" name="id" id="id" value="" data-clear-btn="true" placeholder="ID 입력">
+                            <button type="button" class="ui-btn ui-btn-inline">ID 체크</button>
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <input type="password" name="pw" id="pw" placeholder="비밀번호 입력">
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <input type="password" name="pw2" id="pw2"  placeholder="비밀번호 확인 입력">
+                        </li>
+                        <div class="ui-btn-group">
+                            <button type="submit" class="ui-btn ui-btn-inline">로그인</button>
+                            <button type="reset" class="ui-btn ui-btn-inline">취소</button>
+                        </div>
+                    </ul>
+                </form>
+            </div>    
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+            <h3>여기는 푸터입니다.</h3>
+        </footer>
+    </div>
+    
+</body>
+</html>
